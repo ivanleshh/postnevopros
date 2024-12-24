@@ -1,0 +1,74 @@
+#main {
+    animation: main ease-out .6s;
+}
+
+textarea {
+    resize: none;
+}
+
+.invalid-feedback {
+    animation: feedback ease-out .6s;
+}
+
+.is-invalid {
+    animation: invalid ease-out .4s;
+}
+
+.is-valid {
+    animation: valid ease-out .6s;
+}
+
+.answer-hide {
+    position: absolute;
+    z-index: -10;
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: 0.5s ease;
+    width: 100%;
+}
+
+.answer-show {
+    transform: translateY(0px);
+    opacity: 1;
+    transition: 0.5s ease;
+}
+
+.shadow-dark {
+    box-shadow: 0 0 20px rgb(115, 115, 115);
+}
+
+@keyframes main {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    } to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes feedback {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    } to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes invalid {
+    0%, 50%, 100% {
+        transform: translateY(0);
+    } 25%, 75% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes valid {
+    0%, 50%, 100% {
+        box-shadow: 0 0 0px rgb(13, 106, 13);
+    } 25%, 75% {
+        box-shadow: 0 0 10px rgb(13, 106, 13);
+    }
+}
